@@ -102,5 +102,16 @@ namespace _10_LINQ_HW_0502
                     select x;
             this.dataGridView1.DataSource = q.ToList();
         }
+
+        private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+            string a = this.dataGridView1.CurrentRow.Cells[0].Value.ToString();
+            var q = from n in awDataSet1.ProductPhoto
+                    where n.ProductPhotoID == int.Parse(a)
+                    select n;
+            byte[] bytes = q.ToList()[0].LargePhoto;
+            System.IO.MemoryStream ms = new System.IO.MemoryStream(bytes);
+            pictureBox1.Image = Image.FromStream(ms);
+        }
     }
 }

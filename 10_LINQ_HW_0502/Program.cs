@@ -1,4 +1,5 @@
-﻿using System;
+﻿using MyHomeWork;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
@@ -23,7 +24,9 @@ namespace _10_LINQ_HW_0502
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
             //Application.Run(new Frm作業_1());
-            Application.Run(new Frm作業_2());
+            // Application.Run(new Frm作業_2());
+            // Application.Run(new Frm作業_3());
+            Application.Run(new Frm考試());
         }
     }
 }
